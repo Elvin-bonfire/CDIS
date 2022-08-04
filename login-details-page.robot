@@ -21,4 +21,5 @@ Login Super Admin Account
     ${superadmin}=     Get Super Admin credentials    super_admin
     Fill out Login Details    ${superadmin}
     Click Button   Login
-    Wait Until Page Contains    Dashboard    
+    Configure Selenium
+    Wait Until Page Contains    Dashboard

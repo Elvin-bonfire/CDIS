@@ -1,3 +1,6 @@
+*** Settings ***
+Library    SeleniumLibrary
+
 *** Keywords ***
 Configure Selenium
     Set Selenium Implicit Wait    10 seconds

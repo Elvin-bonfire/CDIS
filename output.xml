@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220803 18:03:33.548" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220805 14:05:43.431" rpa="false" schemaversion="3">
 <suite id="s1" name="Login" source="C:\Users\Elvin\Desktop\RF\CDIS\login.robot">
-<test id="s1-t1" name="Verify if the user can log in using a valid username and valid password" line="15">
+<test id="s1-t1" name="Verify if the user can log in using a valid username and valid password" line="16">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Initialize Test Data</arg>
-<arg>Configure Selenium</arg>
 <arg>Navigate To LoginPage</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
 <kw name="Initialize Test Data" library="data">
@@ -14,65 +13,57 @@
 <var>${json_data}</var>
 <arg>${EXECDIR}/login.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220803 18:03:33.771" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220803 18:03:33.771" level="INFO">${json_data} = {
+<msg timestamp="20220805 14:05:43.714" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220805 14:05:43.714" level="INFO">${json_data} = {
     "super_admin" : {
         "username" : "superadmin",
         "password" : "superadmin031819"
     }
 }</msg>
-<status status="PASS" starttime="20220803 18:03:33.770" endtime="20220803 18:03:33.771"/>
+<status status="PASS" starttime="20220805 14:05:43.714" endtime="20220805 14:05:43.714"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${json}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220803 18:03:33.772" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:33.771" endtime="20220803 18:03:33.772"/>
+<msg timestamp="20220805 14:05:43.715" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:05:43.714" endtime="20220805 14:05:43.715"/>
 </kw>
-<msg timestamp="20220803 18:03:33.772" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:33.770" endtime="20220803 18:03:33.772"/>
+<msg timestamp="20220805 14:05:43.715" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:05:43.713" endtime="20220805 14:05:43.715"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${superadmin}</arg>
 <arg>${json}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220803 18:03:33.774" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:33.773" endtime="20220803 18:03:33.774"/>
+<msg timestamp="20220805 14:05:43.716" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:05:43.715" endtime="20220805 14:05:43.716"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:33.770" endtime="20220803 18:03:33.774"/>
-</kw>
-<kw name="Configure Selenium" library="system">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220803 18:03:33.774" endtime="20220803 18:03:33.774"/>
-</kw>
-<status status="PASS" starttime="20220803 18:03:33.774" endtime="20220803 18:03:33.774"/>
+<status status="PASS" starttime="20220805 14:05:43.712" endtime="20220805 14:05:43.716"/>
 </kw>
 <kw name="Navigate To LoginPage" library="system">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SiteUrl}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 18:03:33.775" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
-<status status="PASS" starttime="20220803 18:03:33.775" endtime="20220803 18:03:39.395"/>
+<msg timestamp="20220805 14:05:43.717" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
+<status status="PASS" starttime="20220805 14:05:43.717" endtime="20220805 14:05:51.453"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 18:03:39.395" endtime="20220803 18:03:39.551"/>
+<status status="PASS" starttime="20220805 14:05:51.453" endtime="20220805 14:05:51.608"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:33.775" endtime="20220803 18:03:39.552"/>
+<status status="PASS" starttime="20220805 14:05:43.717" endtime="20220805 14:05:51.608"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:33.770" endtime="20220803 18:03:39.552"/>
+<status status="PASS" starttime="20220805 14:05:43.712" endtime="20220805 14:05:51.609"/>
 </kw>
 <kw name="Login Super Admin Account" library="login-details-page">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Always Updated.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220803 18:03:39.599" level="INFO">Current page contains text 'Always Updated.'.</msg>
-<status status="PASS" starttime="20220803 18:03:39.553" endtime="20220803 18:03:39.599"/>
+<msg timestamp="20220805 14:05:51.681" level="INFO">Current page contains text 'Always Updated.'.</msg>
+<status status="PASS" starttime="20220805 14:05:51.614" endtime="20220805 14:05:51.681"/>
 </kw>
 <kw name="Get Super Admin credentials" library="data">
 <var>${superadmin}</var>
@@ -82,11 +73,11 @@
 <arg>${superadmin}</arg>
 <arg>${invoice_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20220803 18:03:39.601" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:03:39.601" endtime="20220803 18:03:39.601"/>
+<msg timestamp="20220805 14:05:51.686" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:05:51.684" endtime="20220805 14:05:51.686"/>
 </kw>
-<msg timestamp="20220803 18:03:39.602" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:03:39.600" endtime="20220803 18:03:39.602"/>
+<msg timestamp="20220805 14:05:51.687" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:05:51.682" endtime="20220805 14:05:51.687"/>
 </kw>
 <kw name="Fill out Login Details" library="login-details-page">
 <arg>${superadmin}</arg>
@@ -96,63 +87,70 @@
 <arg>css:[placeholder="Username"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:03:39.605" level="INFO">Typing text 'superadmin' into text field 'css:[placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20220803 18:03:39.604" endtime="20220803 18:03:39.787"/>
+<msg timestamp="20220805 14:05:51.694" level="INFO">Typing text 'superadmin' into text field 'css:[placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20220805 14:05:51.693" endtime="20220805 14:05:51.957"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:39.603" endtime="20220803 18:03:39.787"/>
+<status status="PASS" starttime="20220805 14:05:51.689" endtime="20220805 14:05:51.958"/>
 </kw>
 <kw name="Enter Password" library="login-details-page">
 <arg>${superadmin["password"]}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 18:03:39.789" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
-<status status="PASS" starttime="20220803 18:03:39.788" endtime="20220803 18:03:39.884"/>
+<msg timestamp="20220805 14:05:51.963" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20220805 14:05:51.962" endtime="20220805 14:05:52.183"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:03:39.886" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
-<msg timestamp="20220803 18:03:39.926" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220803 18:03:40.001" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220803 18:03:39.885" endtime="20220803 18:03:40.001"/>
+<msg timestamp="20220805 14:05:52.184" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
+<msg timestamp="20220805 14:05:52.243" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220805 14:05:52.370" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220805 14:05:52.183" endtime="20220805 14:05:52.370"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:39.787" endtime="20220803 18:03:40.001"/>
+<status status="PASS" starttime="20220805 14:05:51.958" endtime="20220805 14:05:52.371"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:39.602" endtime="20220803 18:03:40.002"/>
+<status status="PASS" starttime="20220805 14:05:51.688" endtime="20220805 14:05:52.371"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220803 18:03:40.003" level="INFO">Clicking button 'Login'.</msg>
-<status status="PASS" starttime="20220803 18:03:40.002" endtime="20220803 18:03:50.168"/>
+<msg timestamp="20220805 14:05:52.372" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20220805 14:05:52.371" endtime="20220805 14:05:52.584"/>
+</kw>
+<kw name="Configure Selenium" library="system">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220805 14:05:52.586" endtime="20220805 14:05:52.590"/>
+</kw>
+<status status="PASS" starttime="20220805 14:05:52.585" endtime="20220805 14:05:52.591"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Dashboard</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220803 18:03:50.168" endtime="20220803 18:03:56.439"/>
+<status status="PASS" starttime="20220805 14:05:52.591" endtime="20220805 14:06:01.100"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:39.552" endtime="20220803 18:03:56.440"/>
+<status status="PASS" starttime="20220805 14:05:51.611" endtime="20220805 14:06:01.101"/>
 </kw>
 <kw name="Exit Selenium" library="system" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220803 18:03:56.686" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-52.png"&gt;&lt;img src="selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220803 18:03:56.442" endtime="20220803 18:03:56.687"/>
+<msg timestamp="20220805 14:06:01.537" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220805 14:06:01.104" endtime="20220805 14:06:01.538"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220803 18:03:56.687" endtime="20220803 18:03:59.077"/>
+<status status="PASS" starttime="20220805 14:06:01.538" endtime="20220805 14:06:04.125"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:56.441" endtime="20220803 18:03:59.077"/>
+<status status="PASS" starttime="20220805 14:06:01.102" endtime="20220805 14:06:04.126"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:33.768" endtime="20220803 18:03:59.077"/>
+<status status="PASS" starttime="20220805 14:05:43.711" endtime="20220805 14:06:04.128"/>
 </test>
-<test id="s1-t2" name="Verify if the user can't log in using invalid username and valid password" line="18">
+<test id="s1-t2" name="Verify if the user can't log in using invalid username and valid password" line="19">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Initialize Test Data</arg>
-<arg>Configure Selenium</arg>
 <arg>Navigate To LoginPage</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
 <kw name="Initialize Test Data" library="data">
@@ -162,64 +160,56 @@
 <var>${json_data}</var>
 <arg>${EXECDIR}/login.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220803 18:03:59.088" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220803 18:03:59.088" level="INFO">${json_data} = {
+<msg timestamp="20220805 14:06:04.140" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220805 14:06:04.141" level="INFO">${json_data} = {
     "super_admin" : {
         "username" : "superadmin",
         "password" : "superadmin031819"
     }
 }</msg>
-<status status="PASS" starttime="20220803 18:03:59.087" endtime="20220803 18:03:59.088"/>
+<status status="PASS" starttime="20220805 14:06:04.138" endtime="20220805 14:06:04.141"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${json}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220803 18:03:59.089" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:59.088" endtime="20220803 18:03:59.089"/>
+<msg timestamp="20220805 14:06:04.144" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:04.143" endtime="20220805 14:06:04.144"/>
 </kw>
-<msg timestamp="20220803 18:03:59.089" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:59.087" endtime="20220803 18:03:59.089"/>
+<msg timestamp="20220805 14:06:04.146" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:04.137" endtime="20220805 14:06:04.146"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${superadmin}</arg>
 <arg>${json}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220803 18:03:59.090" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:03:59.089" endtime="20220803 18:03:59.090"/>
+<msg timestamp="20220805 14:06:04.148" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:04.146" endtime="20220805 14:06:04.148"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:59.087" endtime="20220803 18:03:59.090"/>
-</kw>
-<kw name="Configure Selenium" library="system">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220803 18:03:59.090" endtime="20220803 18:03:59.091"/>
-</kw>
-<status status="PASS" starttime="20220803 18:03:59.090" endtime="20220803 18:03:59.091"/>
+<status status="PASS" starttime="20220805 14:06:04.136" endtime="20220805 14:06:04.149"/>
 </kw>
 <kw name="Navigate To LoginPage" library="system">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SiteUrl}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 18:03:59.092" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
-<status status="PASS" starttime="20220803 18:03:59.092" endtime="20220803 18:04:05.544"/>
+<msg timestamp="20220805 14:06:04.152" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
+<status status="PASS" starttime="20220805 14:06:04.150" endtime="20220805 14:06:13.457"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 18:04:05.544" endtime="20220803 18:04:05.704"/>
+<status status="PASS" starttime="20220805 14:06:13.458" endtime="20220805 14:06:13.607"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:59.091" endtime="20220803 18:04:05.704"/>
+<status status="PASS" starttime="20220805 14:06:04.149" endtime="20220805 14:06:13.608"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:59.086" endtime="20220803 18:04:05.705"/>
+<status status="PASS" starttime="20220805 14:06:04.135" endtime="20220805 14:06:13.608"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Always Updated.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220803 18:04:05.762" level="INFO">Current page contains text 'Always Updated.'.</msg>
-<status status="PASS" starttime="20220803 18:04:05.706" endtime="20220803 18:04:05.763"/>
+<msg timestamp="20220805 14:06:13.669" level="INFO">Current page contains text 'Always Updated.'.</msg>
+<status status="PASS" starttime="20220805 14:06:13.610" endtime="20220805 14:06:13.669"/>
 </kw>
 <kw name="Get Super Admin credentials" library="data">
 <var>${superadmin}</var>
@@ -229,11 +219,11 @@
 <arg>${superadmin}</arg>
 <arg>${invoice_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20220803 18:04:05.766" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:05.765" endtime="20220803 18:04:05.766"/>
+<msg timestamp="20220805 14:06:13.675" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:06:13.673" endtime="20220805 14:06:13.675"/>
 </kw>
-<msg timestamp="20220803 18:04:05.767" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:05.764" endtime="20220803 18:04:05.768"/>
+<msg timestamp="20220805 14:06:13.676" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:06:13.671" endtime="20220805 14:06:13.676"/>
 </kw>
 <kw name="Enter Username" library="login-details-page">
 <arg>superadmins</arg>
@@ -241,59 +231,58 @@
 <arg>css:[placeholder="Username"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:05.774" level="INFO">Typing text 'superadmins' into text field 'css:[placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:05.772" endtime="20220803 18:04:05.935"/>
+<msg timestamp="20220805 14:06:13.682" level="INFO">Typing text 'superadmins' into text field 'css:[placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20220805 14:06:13.680" endtime="20220805 14:06:14.004"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:05.770" endtime="20220803 18:04:05.935"/>
+<status status="PASS" starttime="20220805 14:06:13.678" endtime="20220805 14:06:14.004"/>
 </kw>
 <kw name="Enter Password" library="login-details-page">
 <arg>${superadmin["password"]}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:05.938" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:05.938" endtime="20220803 18:04:06.036"/>
+<msg timestamp="20220805 14:06:14.009" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20220805 14:06:14.008" endtime="20220805 14:06:14.139"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:06.037" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
-<msg timestamp="20220803 18:04:06.085" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220803 18:04:06.157" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220803 18:04:06.036" endtime="20220803 18:04:06.157"/>
+<msg timestamp="20220805 14:06:14.142" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
+<msg timestamp="20220805 14:06:14.222" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220805 14:06:14.356" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220805 14:06:14.140" endtime="20220805 14:06:14.356"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:05.936" endtime="20220803 18:04:06.157"/>
+<status status="PASS" starttime="20220805 14:06:14.006" endtime="20220805 14:06:14.357"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:06.159" level="INFO">Clicking button 'Login'.</msg>
-<status status="PASS" starttime="20220803 18:04:06.158" endtime="20220803 18:04:16.339"/>
+<msg timestamp="20220805 14:06:14.358" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20220805 14:06:14.358" endtime="20220805 14:06:24.763"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>These credentials do not match our records.</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220803 18:04:16.340" endtime="20220803 18:04:17.154"/>
+<status status="PASS" starttime="20220805 14:06:24.764" endtime="20220805 14:06:25.753"/>
 </kw>
 <kw name="Exit Selenium" library="system" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220803 18:04:18.064" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220803 18:04:17.156" endtime="20220803 18:04:18.064"/>
+<msg timestamp="20220805 14:06:28.078" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220805 14:06:25.758" endtime="20220805 14:06:28.079"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220803 18:04:18.064" endtime="20220803 18:04:20.496"/>
+<status status="PASS" starttime="20220805 14:06:28.079" endtime="20220805 14:06:30.484"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:17.155" endtime="20220803 18:04:20.497"/>
+<status status="PASS" starttime="20220805 14:06:25.755" endtime="20220805 14:06:30.484"/>
 </kw>
-<status status="PASS" starttime="20220803 18:03:59.085" endtime="20220803 18:04:20.500"/>
+<status status="PASS" starttime="20220805 14:06:04.132" endtime="20220805 14:06:30.486"/>
 </test>
-<test id="s1-t3" name="Verify if the user can't log in using a valid username and invalid password" line="26">
+<test id="s1-t3" name="Verify if the user can't log in using a valid username and invalid password" line="27">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Initialize Test Data</arg>
-<arg>Configure Selenium</arg>
 <arg>Navigate To LoginPage</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
 <kw name="Initialize Test Data" library="data">
@@ -303,64 +292,56 @@
 <var>${json_data}</var>
 <arg>${EXECDIR}/login.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220803 18:04:20.506" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220803 18:04:20.507" level="INFO">${json_data} = {
+<msg timestamp="20220805 14:06:30.499" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220805 14:06:30.500" level="INFO">${json_data} = {
     "super_admin" : {
         "username" : "superadmin",
         "password" : "superadmin031819"
     }
 }</msg>
-<status status="PASS" starttime="20220803 18:04:20.505" endtime="20220803 18:04:20.507"/>
+<status status="PASS" starttime="20220805 14:06:30.498" endtime="20220805 14:06:30.500"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${json}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220803 18:04:20.508" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:20.507" endtime="20220803 18:04:20.508"/>
+<msg timestamp="20220805 14:06:30.502" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:30.501" endtime="20220805 14:06:30.502"/>
 </kw>
-<msg timestamp="20220803 18:04:20.508" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:20.505" endtime="20220803 18:04:20.509"/>
+<msg timestamp="20220805 14:06:30.503" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:30.496" endtime="20220805 14:06:30.503"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${superadmin}</arg>
 <arg>${json}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220803 18:04:20.510" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:20.509" endtime="20220803 18:04:20.510"/>
+<msg timestamp="20220805 14:06:30.505" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
+<status status="PASS" starttime="20220805 14:06:30.504" endtime="20220805 14:06:30.505"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:20.505" endtime="20220803 18:04:20.510"/>
-</kw>
-<kw name="Configure Selenium" library="system">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220803 18:04:20.510" endtime="20220803 18:04:20.511"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:20.510" endtime="20220803 18:04:20.511"/>
+<status status="PASS" starttime="20220805 14:06:30.495" endtime="20220805 14:06:30.505"/>
 </kw>
 <kw name="Navigate To LoginPage" library="system">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SiteUrl}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 18:04:20.513" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
-<status status="PASS" starttime="20220803 18:04:20.512" endtime="20220803 18:04:26.020"/>
+<msg timestamp="20220805 14:06:30.508" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
+<status status="PASS" starttime="20220805 14:06:30.507" endtime="20220805 14:06:38.099"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 18:04:26.020" endtime="20220803 18:04:26.177"/>
+<status status="PASS" starttime="20220805 14:06:38.100" endtime="20220805 14:06:38.283"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:20.511" endtime="20220803 18:04:26.178"/>
+<status status="PASS" starttime="20220805 14:06:30.506" endtime="20220805 14:06:38.284"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:20.504" endtime="20220803 18:04:26.178"/>
+<status status="PASS" starttime="20220805 14:06:30.494" endtime="20220805 14:06:38.284"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Always Updated.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220803 18:04:26.237" level="INFO">Current page contains text 'Always Updated.'.</msg>
-<status status="PASS" starttime="20220803 18:04:26.180" endtime="20220803 18:04:26.238"/>
+<msg timestamp="20220805 14:06:38.379" level="INFO">Current page contains text 'Always Updated.'.</msg>
+<status status="PASS" starttime="20220805 14:06:38.288" endtime="20220805 14:06:38.380"/>
 </kw>
 <kw name="Get Super Admin credentials" library="data">
 <var>${superadmin}</var>
@@ -370,11 +351,11 @@
 <arg>${superadmin}</arg>
 <arg>${invoice_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20220803 18:04:26.243" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:26.241" endtime="20220803 18:04:26.243"/>
+<msg timestamp="20220805 14:06:38.386" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:06:38.384" endtime="20220805 14:06:38.386"/>
 </kw>
-<msg timestamp="20220803 18:04:26.244" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:26.238" endtime="20220803 18:04:26.244"/>
+<msg timestamp="20220805 14:06:38.388" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
+<status status="PASS" starttime="20220805 14:06:38.382" endtime="20220805 14:06:38.388"/>
 </kw>
 <kw name="Enter Username" library="login-details-page">
 <arg>superadmin</arg>
@@ -382,202 +363,65 @@
 <arg>css:[placeholder="Username"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:26.247" level="INFO">Typing text 'superadmin' into text field 'css:[placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:26.246" endtime="20220803 18:04:26.390"/>
+<msg timestamp="20220805 14:06:38.392" level="INFO">Typing text 'superadmin' into text field 'css:[placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20220805 14:06:38.391" endtime="20220805 14:06:38.765"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:26.245" endtime="20220803 18:04:26.391"/>
+<status status="PASS" starttime="20220805 14:06:38.390" endtime="20220805 14:06:38.766"/>
 </kw>
 <kw name="Enter Password" library="login-details-page">
 <arg>superadmin03181900</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:26.393" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:26.392" endtime="20220803 18:04:26.481"/>
+<msg timestamp="20220805 14:06:38.770" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20220805 14:06:38.769" endtime="20220805 14:06:38.988"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>css:[placeholder="Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:26.482" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
-<msg timestamp="20220803 18:04:26.527" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220803 18:04:26.612" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220803 18:04:26.481" endtime="20220803 18:04:26.612"/>
+<msg timestamp="20220805 14:06:38.991" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
+<msg timestamp="20220805 14:06:39.106" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220805 14:06:39.275" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220805 14:06:38.989" endtime="20220805 14:06:39.276"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:26.391" endtime="20220803 18:04:26.612"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>Login</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:26.613" level="INFO">Clicking button 'Login'.</msg>
-<status status="PASS" starttime="20220803 18:04:26.613" endtime="20220803 18:04:36.813"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>These credentials do not match our records.</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220803 18:04:36.815" endtime="20220803 18:04:37.743"/>
-</kw>
-<kw name="Exit Selenium" library="system" type="TEARDOWN">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220803 18:04:38.586" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220803 18:04:37.745" endtime="20220803 18:04:38.586"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220803 18:04:38.587" endtime="20220803 18:04:41.186"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:37.744" endtime="20220803 18:04:41.186"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:20.503" endtime="20220803 18:04:41.187"/>
-</test>
-<test id="s1-t4" name="Verify if the user can log in using an empty username and valid password" line="34">
-<kw name="Run Keywords" library="BuiltIn" type="SETUP">
-<arg>Initialize Test Data</arg>
-<arg>Configure Selenium</arg>
-<arg>Navigate To LoginPage</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<kw name="Initialize Test Data" library="data">
-<kw name="Read Invoice Fixtures" library="data">
-<var>${json}</var>
-<kw name="Get File" library="OperatingSystem">
-<var>${json_data}</var>
-<arg>${EXECDIR}/login.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220803 18:04:41.192" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Elvin\Desktop\RF\CDIS\login.json"&gt;C:\Users\Elvin\Desktop\RF\CDIS\login.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220803 18:04:41.192" level="INFO">${json_data} = {
-    "super_admin" : {
-        "username" : "superadmin",
-        "password" : "superadmin031819"
-    }
-}</msg>
-<status status="PASS" starttime="20220803 18:04:41.191" endtime="20220803 18:04:41.192"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${json}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220803 18:04:41.193" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:41.192" endtime="20220803 18:04:41.193"/>
-</kw>
-<msg timestamp="20220803 18:04:41.193" level="INFO">${json} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:41.191" endtime="20220803 18:04:41.193"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${superadmin}</arg>
-<arg>${json}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220803 18:04:41.193" level="INFO">${superadmin} = {'super_admin': {'username': 'superadmin', 'password': 'superadmin031819'}}</msg>
-<status status="PASS" starttime="20220803 18:04:41.193" endtime="20220803 18:04:41.193"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:41.191" endtime="20220803 18:04:41.193"/>
-</kw>
-<kw name="Configure Selenium" library="system">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220803 18:04:41.194" endtime="20220803 18:04:41.194"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:41.194" endtime="20220803 18:04:41.195"/>
-</kw>
-<kw name="Navigate To LoginPage" library="system">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${SiteUrl}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 18:04:41.196" level="INFO">Opening browser 'Chrome' to base url 'http://localhost'.</msg>
-<status status="PASS" starttime="20220803 18:04:41.195" endtime="20220803 18:04:47.717"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 18:04:47.717" endtime="20220803 18:04:47.865"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:41.195" endtime="20220803 18:04:47.866"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:41.190" endtime="20220803 18:04:47.866"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Always Updated.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220803 18:04:47.913" level="INFO">Current page contains text 'Always Updated.'.</msg>
-<status status="PASS" starttime="20220803 18:04:47.868" endtime="20220803 18:04:47.913"/>
-</kw>
-<kw name="Get Super Admin credentials" library="data">
-<var>${superadmin}</var>
-<arg>super_admin</arg>
-<kw name="Get From Dictionary" library="Collections">
-<var>${superadmin}</var>
-<arg>${superadmin}</arg>
-<arg>${invoice_name}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20220803 18:04:47.917" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:47.916" endtime="20220803 18:04:47.917"/>
-</kw>
-<msg timestamp="20220803 18:04:47.917" level="INFO">${superadmin} = {'username': 'superadmin', 'password': 'superadmin031819'}</msg>
-<status status="PASS" starttime="20220803 18:04:47.915" endtime="20220803 18:04:47.917"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>css:[placeholder="Username"]</arg>
-<arg>' '</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:47.918" level="INFO">Typing text '' '' into text field 'css:[placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:47.918" endtime="20220803 18:04:48.064"/>
-</kw>
-<kw name="Enter Password" library="login-details-page">
-<arg>superadmin031819</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css:[placeholder="Password"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:48.067" level="INFO">Clicking element 'css:[placeholder="Password"]'.</msg>
-<status status="PASS" starttime="20220803 18:04:48.066" endtime="20220803 18:04:48.161"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>css:[placeholder="Password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:48.162" level="INFO">Typing password into text field 'css:[placeholder="Password"]'.</msg>
-<msg timestamp="20220803 18:04:48.201" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220803 18:04:48.270" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220803 18:04:48.161" endtime="20220803 18:04:48.270"/>
-</kw>
-<status status="PASS" starttime="20220803 18:04:48.065" endtime="20220803 18:04:48.270"/>
+<status status="PASS" starttime="20220805 14:06:38.768" endtime="20220805 14:06:39.277"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220803 18:04:48.271" level="INFO">Clicking button 'Login'.</msg>
-<status status="PASS" starttime="20220803 18:04:48.271" endtime="20220803 18:04:58.398"/>
+<msg timestamp="20220805 14:06:39.279" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20220805 14:06:39.278" endtime="20220805 14:06:49.561"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>These credentials do not match our records.</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220803 18:04:58.399" endtime="20220803 18:04:58.880"/>
+<status status="PASS" starttime="20220805 14:06:49.562" endtime="20220805 14:06:50.817"/>
 </kw>
 <kw name="Exit Selenium" library="system" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220803 18:04:59.725" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220803 18:04:58.882" endtime="20220803 18:04:59.725"/>
+<msg timestamp="20220805 14:06:51.958" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220805 14:06:50.822" endtime="20220805 14:06:51.958"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220803 18:04:59.725" endtime="20220803 18:05:02.079"/>
+<status status="PASS" starttime="20220805 14:06:51.958" endtime="20220805 14:06:54.389"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:58.881" endtime="20220803 18:05:02.079"/>
+<status status="PASS" starttime="20220805 14:06:50.819" endtime="20220805 14:06:54.389"/>
 </kw>
-<status status="PASS" starttime="20220803 18:04:41.189" endtime="20220803 18:05:02.079"/>
+<status status="PASS" starttime="20220805 14:06:30.491" endtime="20220805 14:06:54.391"/>
 </test>
-<status status="PASS" starttime="20220803 18:03:33.548" endtime="20220803 18:05:02.084"/>
+<status status="PASS" starttime="20220805 14:05:43.434" endtime="20220805 14:06:54.397"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
